@@ -1,0 +1,179 @@
+.login-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #050816;
+
+  font-family: "LoveLetter", monospace;
+}
+
+.login-shell {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-panel {
+  width: 420px;
+  min-height: 360px;
+  padding: 42px 38px 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  border-radius: 18px;
+  border: 1px solid rgba(180, 220, 255, 0.18);
+  background: rgba(13, 26, 78, 0.34);
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 24px 70px rgba(0, 0, 0, 0.32);
+}
+
+.avatar-video {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid rgba(170, 230, 255, 0.35);
+  box-shadow:
+    0 0 18px rgba(120, 210, 255, 0.42),
+    0 0 40px rgba(120, 210, 255, 0.12);
+}
+
+.username {
+  color: #e8f5ff;
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-shadow: 0 0 8px rgba(180, 235, 255, 0.35);
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.password-input {
+  width: 290px;
+  padding: 14px 16px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+
+  background: rgba(3, 8, 28, 0.84);
+  color: #f2fbff;
+  font-size: 16px;
+  font-family: inherit;
+  letter-spacing: 1px;
+
+  box-shadow: inset 0 0 0 1px rgba(140, 210, 255, 0.08);
+}
+
+.password-input::placeholder {
+  color: rgba(230, 244, 255, 0.62);
+}
+
+.hint {
+  max-width: 320px;
+  color: rgba(206, 229, 255, 0.8);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.error-text {
+  color: #ff7b98;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+}
+
+.overlay-dark {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(2, 8, 24, 0.18);
+  pointer-events: none;
+}
+
+.overlay-noise {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.05;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.14) 0.7px, transparent 0.7px);
+  background-size: 4px 4px;
+  pointer-events: none;
+}
+
+.overlay-scanline {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.1;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+  pointer-events: none;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  border-radius: 999px;
+  border: 1px solid rgba(120, 220, 255, 0.16);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 18px rgba(120, 220, 255, 0.06);
+  pointer-events: none;
+}
+
+.orbit-one {
+  width: 760px;
+  height: 340px;
+  animation: orbit-one-spin 28s linear infinite;
+}
+
+.orbit-two {
+  width: 520px;
+  height: 520px;
+  animation: orbit-two-spin 36s linear infinite reverse;
+}
+
+@keyframes orbit-one-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes orbit-two-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

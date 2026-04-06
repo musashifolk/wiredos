@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "LoveLetter";
+  src: url("./assets/fonts/LoveLetterTW.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #000;
+}
+
+* {
+  box-sizing: border-box;
+}

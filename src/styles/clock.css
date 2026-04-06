@@ -1,0 +1,7 @@
+.wired-clock {
+  color: #d1d5db; /* soft grey */
+
+  text-shadow:
+    0 0 6px rgba(255,255,255,0.25),
+    0 0 12px rgba(200,200,200,0.15);
+}
