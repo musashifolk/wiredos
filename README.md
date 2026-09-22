@@ -53,12 +53,6 @@ A small reactive log window intended to feel like part of the system rather than
 ### Settings
 Controls for wallpaper theme, window glow, blur, and CRT-style overlays.
 
-## Stack
-
-- React
-- Vite
-- lucide-react
-
 ## Project structure
 
 ```text
